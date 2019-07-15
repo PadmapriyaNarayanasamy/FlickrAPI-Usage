@@ -1,0 +1,19 @@
+<div>
+  <h2 class="heading">Flickr Images </h2>
+</div>
+
+
+<div class="conatiner" style="padding-top:20px;">  
+    <div class="col-sm-5" >  
+         <input class="form-control" type="text" #searchText placeholder="Search......." >
+         <button  class="btn btn-primary btn-lg" (click)=filterdata(searchText.value)>Search</button>        
+    </div> 
+    
+</div>
+<div class="row">
+<div class="col-md-2 gridStyle" md-cols="2" md-row-height="4:3" *ngFor="let image of images">  
+    <img src="{{image.link[1].$.href}}" alt="image not found"/>    
+    </div>
+
+
+</div>
